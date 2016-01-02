@@ -1,10 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var Post = require('./models/post');
 var app = express();
 
 
-var Post = require('./models/post')
 
 app.use(bodyParser.json());
 
@@ -22,7 +21,7 @@ app.post('/api/posts', function(req, res, next){
   })
   post.save( function(err, post){
     if(err){ return next(err)}
-    res.json(201, posts)
+    res.json(201, post)
   })
 })
 
