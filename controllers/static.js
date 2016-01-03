@@ -7,14 +7,9 @@ router.get('/', function(req, res){
 });
 
 
-
-
-
-
-
 module.exports = router;
 
-// old code does not work
+// old code does not work as sendfile is now depreciated
 // var router = require('express').Router();
 //
 // router.get('/', function(req, res){
