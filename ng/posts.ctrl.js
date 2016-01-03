@@ -1,17 +1,17 @@
 angular.module('app')
-  .controller('PostCtrl', function ($scope, PostsSvc){
-    $scope.addPost = function (){
-      if ($scope.postBody){
+.controller('PostsCtrl', function($scope, PostsSvc){
+    $scope.addPost = function(){
+      if($scope.postBody){
         PostsSvc.create({
-          username : "Rachel",
-          body     : $sope.postBody
+            username : "Rachy B",
+            body     : $scope.postBody
         }).success(function(post){
-          $sope.posts.unshift(post)
-          $scope.postBody = null
+          $scope.posts.unshift(post);
+          $scope.postBody = null;
         })
       }
     }
-    PostsSvc.fetch().success(function(posts){
-      $scope.posts = posts;
-    })
+  PostsSvc.fetch().success(function(posts){
+    $scope.posts = posts;
   })
+})
