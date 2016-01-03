@@ -16,6 +16,7 @@ gulp.task('js', function(){
   .pipe(gulp.dest('assets'));
 });
 
+// fs reads all gulp files in /gulp dir
 fs.readdirSync(__dirname + '/gulp').forEach(function (task){
   require('./gulp/' + task)
 })
@@ -28,4 +29,4 @@ gulp.task('watch:css', function(){
   gulp.watch('css/**/*.styl', ['css'])
 })
 
-gulp.task('dev',['watch:css', 'watch:js'])
+gulp.task('dev',['watch:css', 'watch:js', 'dev:server'])

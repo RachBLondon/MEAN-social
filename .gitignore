@@ -14,7 +14,7 @@ lib-cov
 coverage
 
 # Gulp complied files
-.assets/app.js
+assets/
 
 # node-waf configuration
 .lock-wscript
