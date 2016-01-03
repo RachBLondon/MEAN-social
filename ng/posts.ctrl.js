@@ -1,5 +1,3 @@
-angular.module('app', []);
-
 angular.module('app')
   .controller('PostCtrl', function ($scope, PostsSvc){
     $scope.addPost = function (){
@@ -17,10 +15,3 @@ angular.module('app')
       $scope.posts = posts;
     })
   })
-
-angular.module('app')
- .service('PostsSvc', function($http){
-   this.fetch = function (){
-     return $http.get('/api/posts', post)
-   }
- })
